@@ -16,6 +16,9 @@ print(output)
 file.close() """
 
 def wordcountmapper():
+    """
+    Reads a file and returns the data
+    """
     filename=input("Enter the filename: ")
     with open(filename,"r") as f:
         data=f.read()
