@@ -5,10 +5,10 @@ from mrjob.job import MRJob
 class CountName(MRJob):
     def mapper(self, key, record):
         splits=record.split(',')
-        yield splits[0][0], int(splits[2])
+        yield splits[0][0], 1
 
     def reducer(self, letter, birth):
-        yield letter, count(birth)
+        yield letter, sum(birth)
 
 if __name__ == '__main__':
     CountName.run()

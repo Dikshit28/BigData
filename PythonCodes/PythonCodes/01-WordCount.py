@@ -1,5 +1,5 @@
 from mrjob.job import MRJob
-
+#hadoop command - 
 class WordCount(MRJob):
 
     def mapper(self, _, line):

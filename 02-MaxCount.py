@@ -8,7 +8,7 @@ class WordCount(MRJob):
             MRStep(reducer=self.reducer_maxcount)
         ]
     def mapper(self, _, line):
-        for word in line.split():
+        for word in line.split(","):
             yield word.lower(), 1
 
     def reducer(self, word, counts):
