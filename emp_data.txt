@@ -1,0 +1,6 @@
+Ram,IT,45000,Delhi
+Shyam,HR,67000,Noida
+Raman,IT,58000,Gurgaon
+Akshay,IT,35000,Noida
+Neha,HR,35000,Delhi
+Sikha,HR,25000,Noida

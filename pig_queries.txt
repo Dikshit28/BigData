@@ -1,0 +1,35 @@
+data_1 = LOAD 'hdfs://localhost:9000/input/emp_data.txt' USING PigStorage(',') AS (name:chararray, dept:chararray, salary:int, address:chararray);
+
+data_2 = LOAD 'hdfs://localhost:9000/input/emp_details.txt' USING PigStorage(',') AS (name:chararray, age:int, phone:int, exp:int);
+
+Diagnostic operators
+- dump data;
+- describe data;
+- explain data;
+- illustrate data;
+
+Grouping & Joining
+- group_data = GROUP data by dept;
+- cogroup_data = COGROUP data_1 by dept, data_2 by dept;
+- inner_join = JOIN Relation1_name BY key, Relation2_name BY key;
+- inner_join = JOIN data_1 by name, data_2 by name;
+- left_join = JOIN Relation1_name BY id LEFT OUTER, Relation2_name BY customer_id;
+- left_join = JOIN data_1 by name LEFT OUTER, data_2 by data_2;
+- outer_right = JOIN data_1 BY name RIGHT, data_2 BY name;
+- outer_full = JOIN data_1 BY name FULL OUTER, data_2 BY name;
+
+Filtering Data
+filter_data = FILTER data BY col_name == 'Value';
+distinct_data = DISTINCT data;
+foreach_data = FOREACH data GENERATE col_1, col_2, col_3;
+
+Sorting Data
+order_by_data = ORDER data_1 BY salary DESC;
+limit_data = LIMIT data 4; 
+
+
+
+
+
+
+
